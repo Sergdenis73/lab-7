@@ -1,4 +1,3 @@
-// Визначаємо формулу для обчислення відстані між двома точками
 #define DISTANCE(x1, y1, x2, y2) sqrt(pow((x2) - (x1), 2) + pow((y2) - (y1), 2))
 
 #include <stdio.h>
@@ -15,15 +14,13 @@ int main() {
         return 1;
     }
     
-    double points[N][2]; // Масив для зберігання координат точок
+    double points[N][2];
     
-    // Введення координат точок
     for (int i = 0; i < N; i++) {
         printf("Введіть координати точки %d (x y): ", i + 1);
         scanf("%lf %lf", &points[i][0], &points[i][1]);
     }
     
-    // Обчислення та виведення відстаней між сусідніми точками
     printf("\nВідстані між сусідніми точками:\n");
     for (int i = 0; i < N - 1; i++) {
         double dist = DISTANCE(points[i][0], points[i][1], 
